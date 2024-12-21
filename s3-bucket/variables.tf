@@ -4,7 +4,7 @@ variable "region" {
   default     = "ap-southeast-1"
 }
 
-variable "bucket_name" {
+variable "bucket" {
   description = "The name of the S3 bucket to store the Terraform state."
   type        = string
   default     = "terraform-template-state-bucket"
