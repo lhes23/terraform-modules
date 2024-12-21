@@ -1,5 +1,5 @@
 resource "aws_launch_template" "launch-template" {
-  name          = var.lt_name
+  name          = var.name
   image_id      = var.image_id
   instance_type = var.instance_type
   key_name      = var.key_name
@@ -17,6 +17,6 @@ resource "aws_launch_template" "launch-template" {
   }
 
   tags = {
-    Name = var.lt_name
+    Name = var.name
   }
 }

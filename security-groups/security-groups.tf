@@ -1,6 +1,6 @@
 # Security Group for ALB and EC2
 resource "aws_security_group" "lb_sg" {
-  name   = "lb-sg"
+  name   = "${var.lb_sg_name}-lb-sg"
   vpc_id = var.vpc_id
 
   ingress {
@@ -26,7 +26,7 @@ resource "aws_security_group" "lb_sg" {
 }
 
 resource "aws_security_group" "ec2_sg" {
-  name   = "ec2-sg"
+  name   = "${var.lb_sg_name}-ec2-sg"
   vpc_id = var.vpc_id
 
   ingress {

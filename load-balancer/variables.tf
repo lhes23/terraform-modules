@@ -1,4 +1,4 @@
-variable "lb_name" {
+variable "name" {
   type        = string
   description = "Name of the Application Load Balancer"
 }

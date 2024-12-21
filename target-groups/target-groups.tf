@@ -1,5 +1,5 @@
 resource "aws_lb_target_group" "tg" {
-  name     = "${var.app_name}-tg"
+  name     = var.name
   port     = 80
   protocol = "HTTP"
   vpc_id   = var.vpc_id

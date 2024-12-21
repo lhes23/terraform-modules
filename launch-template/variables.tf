@@ -1,4 +1,4 @@
-variable "lt_name" {
+variable "name" {
   type = string
   description = "Name of the Launch Template"
 }
