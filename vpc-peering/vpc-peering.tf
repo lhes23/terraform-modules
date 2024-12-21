@@ -22,28 +22,3 @@ resource "aws_route" "live_to_staging" {
   destination_cidr_block    = var.staging_vpc_cidr
   vpc_peering_connection_id = aws_vpc_peering_connection.staging_live_peer.id
 }
-
-
-variable "staging_vpc_id" {
-  description = "The ID of the staging VPC"
-}
-
-variable "live_vpc_id" {
-  description = "The ID of the live VPC"
-}
-
-variable "staging_route_table_id" {
-  description = "Route table ID for staging VPC"
-}
-
-variable "live_route_table_id" {
-  description = "Route table ID for live VPC"
-}
-
-variable "staging_vpc_cidr" {
-  description = "CIDR block of the staging VPC"
-}
-
-variable "live_vpc_cidr" {
-  description = "CIDR block of the live VPC"
-}

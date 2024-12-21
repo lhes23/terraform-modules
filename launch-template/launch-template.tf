@@ -20,8 +20,3 @@ resource "aws_launch_template" "launch-template" {
     Name = var.lt_name
   }
 }
-
-output "launch_template_id" {
-  value = aws_launch_template.launch-template.id
-  description = "The ID of the created launch template"
-}

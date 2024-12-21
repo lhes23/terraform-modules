@@ -12,17 +12,3 @@ resource "aws_lb_target_group" "tg" {
     unhealthy_threshold = 2
   }
 }
-
-
-variable "app_name" {
-  description = "App name"
-}
-
-variable "vpc_id" {
-  description = "VPC ID"
-}
-
-
-output "arn" {
-  value = aws_lb_target_group.tg.arn
-}
