@@ -32,8 +32,11 @@ resource "aws_route_table_association" "public_association" {
   route_table_id = aws_route_table.public.id
 }
 
-data "aws_subnet_ids" "vpc_subnets" {
-  vpc_id = var.vpc_id
+data "aws_subnets" "vpc_subnets" {
+  filter {
+    name   = "vpc-id"
+    values = [aws_vpc.vpc.id]
+  }
 }
 
 resource "aws_db_subnet_group" "rds_subnet_group" {
