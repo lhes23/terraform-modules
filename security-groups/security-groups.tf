@@ -54,11 +54,12 @@ resource "aws_security_group" "ec2_sg" {
 resource "aws_security_group" "rds_sg" {
   name        = "${var.lb_sg_name}-rds-sg"
   description = "Allow access to WordPress Docker containers"
+  vpc_id      = var.vpc_id
 
   ingress {
-    from_port   = 3306
-    to_port     = 3306
-    protocol    = "tcp"
+    from_port       = 3306
+    to_port         = 3306
+    protocol        = "tcp"
     security_groups = [aws_security_group.ec2_sg.id]
   }
 

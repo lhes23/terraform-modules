@@ -3,6 +3,6 @@ variable "vpc_id" {
 }
 
 variable "lb_sg_name" {
-  type = string
+  type        = string
   description = "The name of the security group for load balancer and ec2 instance"
 }
