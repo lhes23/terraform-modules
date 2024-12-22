@@ -8,5 +8,5 @@ resource "aws_db_instance" "rds_db" {
   password             = "testpassword"
   parameter_group_name = "default.mysql8.0"
   skip_final_snapshot  = true
-  vpc_security_group_ids = var.rds_sg_ids
+  vpc_security_group_ids = var.vpc_security_group_ids
 }

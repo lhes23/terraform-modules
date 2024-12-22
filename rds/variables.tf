@@ -1,4 +1,4 @@
-variable "rds_sg_ids" {
+variable "vpc_security_group_ids" {
   type        = list(string)
   description = "Security Group IDs for ALB"
 }
