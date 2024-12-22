@@ -12,3 +12,8 @@ variable "db_subnet_group_name" {
   type        = string
   description = "DB subnet group names"
 }
+
+variable "identifier" {
+  type        = string
+  description = "The DB identifier"
+}
