@@ -31,3 +31,15 @@ resource "aws_route_table_association" "public_association" {
   subnet_id      = element(aws_subnet.public_subnet[*].id, count.index)
   route_table_id = aws_route_table.public.id
 }
+
+data "aws_subnet_ids" "vpc_subnets" {
+  vpc_id = var.vpc_id
+}
+
+resource "aws_db_subnet_group" "rds_subnet_group" {
+  name       = "${var.vpc_name}-rds-subnet-group"
+  subnet_ids = data.aws_subnet_ids.vpc_subnets.id
+  tags = {
+    Name = "${var.vpc_name}-rds-subnet-group"
+  }
+}
