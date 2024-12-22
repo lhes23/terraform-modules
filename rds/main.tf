@@ -1,6 +1,7 @@
 resource "aws_db_instance" "rds_db" {
   allocated_storage      = 10
   db_name                = var.db_name
+  identifier = "${var.db_name}_instance"
   engine                 = "mysql"
   engine_version         = "8.0"
   instance_class         = "db.t3.micro"
