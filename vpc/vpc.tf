@@ -39,7 +39,7 @@ data "aws_subnets" "vpc_subnets" {
   }
 }
 
-resource "aws_db_subnet_group" "rds_subnet_group" {
+resource "aws_db_subnet_group" "db_subnet_group" {
   name       = "${var.vpc_name}-rds-subnet-group"
   subnet_ids = data.aws_subnets.vpc_subnets.ids
   tags = {
