@@ -17,3 +17,13 @@ variable "identifier" {
   type        = string
   description = "The DB identifier"
 }
+
+variable "username" {
+  type = string
+  description = "Username of the database"
+}
+
+variable "password" {
+  type = string
+  description = "Password of the database"
+}
