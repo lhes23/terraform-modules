@@ -17,3 +17,15 @@ variable "load_balancer_type" {
   type = string
   description = "Type of load balancer"
 }
+
+variable "health_check" {
+  description = "Health check configuration for the ELB or Target Group"
+  type = object({
+    target              = string
+    interval            = optional(number, 30)
+    timeout             = optional(number, 5)
+    healthy_threshold   = optional(number, 2)
+    unhealthy_threshold = optional(number, 2)
+  })
+  default = null
+}
