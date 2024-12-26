@@ -1,5 +1,5 @@
 variable "name" {
-  type = string
+  type        = string
   description = "The target groups name"
 }
 
@@ -8,7 +8,7 @@ variable "vpc_id" {
 }
 
 variable "health_check_path" {
-  type = string
+  type        = string
   description = "The path for the health check"
-  default = "/"
+  default     = "/"
 }

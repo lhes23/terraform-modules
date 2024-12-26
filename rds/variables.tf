@@ -19,11 +19,11 @@ variable "identifier" {
 }
 
 variable "username" {
-  type = string
+  type        = string
   description = "Username of the database"
 }
 
 variable "password" {
-  type = string
+  type        = string
   description = "Password of the database"
 }

@@ -1,4 +1,5 @@
 resource "aws_db_instance" "rds_db" {
+  depends_on             = [var.db_subnet_group_name]
   allocated_storage      = 10
   db_name                = var.db_name
   identifier             = var.identifier
